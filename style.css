@@ -5,19 +5,113 @@ body {
   padding: 20px;
 }
 
-.container {
-  max-width: 700px;
+/* Login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-form {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #0066ff;
+  outline: none;
+}
+
+#loginBtn {
+  padding: 15px 30px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#loginBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  max-width: 1200px;
   margin: auto;
   background: white;
-  padding: 25px;
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.left-panel {
+  flex: 1;
+  padding: 25px;
+  border-right: 1px solid #eee;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 25px;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 25px;
   color: #333;
+}
+
+/* Select Groups */
+.select-group {
+  margin-bottom: 20px;
+}
+
+.select-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.select-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  min-height: 40px;
+}
+
+.select-group select[multiple] {
+  height: 100px;
 }
 
 /* Search Box */
@@ -49,31 +143,43 @@ h1 {
   background: #0052cc;
 }
 
-/* Type buttons */
-.type-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+/* Active Filters */
+.active-filters {
   margin-bottom: 20px;
 }
 
-.type-btn {
-  padding: 8px 14px;
-  border-radius: 20px;
-  border: 1px solid #aaa;
-  cursor: pointer;
-  background: #eee;
-  transition: 0.2s;
-}
-
-.type-btn:hover {
-  background: #ddd;
-}
-
-.type-btn.active {
+.filter-tag {
+  display: inline-block;
   background: #0066ff;
   color: white;
-  border-color: #0066ff;
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.filter-tag button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.filter-tag button:hover {
+  color: #ccc;
+}
+
+/* Search Term Display */
+.search-term-display {
+  background: #e3f2fd;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #0066ff;
 }
 
 /* Results */
